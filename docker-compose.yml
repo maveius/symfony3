@@ -1,0 +1,65 @@
+php:
+  build: docker/php-fpm
+  volumes:
+    - ./:/app
+  working_dir: /app
+
+nginx:
+  build: docker/nginx
+  ports:
+    - "8080:80"
+  links:
+    - php
+  volumes:
+    - ./:/app
+
+mysql:
+  image: mysql:5.7
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_DATABASE=symfony
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=pass
+    - MYSQL_ROOT_PASSWORD=password
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin:latest
+  links:
+    - mysql:mysql
+  environment:
+    - PMA_ARBITRARY=1
+  restart: always
+  ports:
+    - 8090:80
+
+redis:
+  build: docker/redis
+  ports:
+    - "6379"
+
+elasticsearch:
+  image: elasticsearch:latest
+  command: elasticsearch -Des.network.host=0.0.0.0
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+
+logstash:
+  image: logstash:latest
+  command: logstash -f /etc/logstash/conf.d/logstash.conf
+  volumes:
+    - ./docker/logstash:/etc/logstash/conf.d
+  ports:
+    - "5000:5000"
+  links:
+    - elasticsearch
+
+kibana:
+  build: docker/kibana
+  volumes:
+    - ./docker/kibana/config/:/opt/kibana/config/
+  ports:
+    - "5601:5601"
+  links:
+    - elasticsearch
