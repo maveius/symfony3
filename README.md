@@ -116,6 +116,8 @@ eval "$(docker-machine env default)"
 
 docker-compose build
 docker-compose up
+
+docker-machine ip (copy IP) and then paste to hosts file
 ```
 if everything goes green you should have see all containers started just type
 
@@ -145,7 +147,7 @@ Everything else is defaults from parameters.yml.dist
 ## Add line in HOST file
 add this line to host file in your system
 ```
-127.0.0.1 localhost.dev
+IP_COPIED localhost.dev
 ```
 
 ### Windows
