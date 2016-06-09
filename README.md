@@ -33,11 +33,9 @@ deadline - dateTime type cannot be null, only date from future
 
 completed - boolean type cannot be null
 
-To test api you could use Postman.
+To test api you could use Curl or Postman.
 
 (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
-
-or any other similar app.
 
 Remember to create Entity, Form and Validation for this collection.
 
@@ -113,8 +111,8 @@ Install Docker from one of instruction
 
 Now We start docker
 ```
-docker-machine start default
-eval "$(docker-machine env default)"
+docker-machine start opstalent
+eval "$(docker-machine env opstalent)"
 
 docker-compose build
 docker-compose up
