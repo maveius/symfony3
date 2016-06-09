@@ -53,7 +53,7 @@ You need Composer so grab instruction from
 All future commands are assumes composer installed globally
 
 ## PHP 7
-You need to install php interpreter if you dont heve already :)
+You need to install php interpreter if you don't have already :)
 
 ### Windows
 (http://windows.php.net/qa/)
@@ -113,6 +113,9 @@ Install Docker from one of instruction
 
 Now We start docker
 ```
+docker-machine start default
+eval "$(docker-machine env default)"
+
 docker-compose build
 docker-compose up
 ```
