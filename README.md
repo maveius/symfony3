@@ -5,12 +5,22 @@ Symfony 3.0 REST API Project Recruitment Test Task
 ## Task
 Your task is to create api for TODO list
 
+GET - list of todos
+POST - create new todo
+PUT - edit todo item
+DELETE - delete todo item
 ```
-GET /todo //list of todos
-PUT /todo/{id} //edit todo
-POST /todo //create new todo
-DELETE /todo/{id} //delete todo item
+GET /todo
+PUT /todo/{id}
+POST /todo
+DELETE /todo/{id}
 ```
+
+Every todo item have
+name - max 255 chars cannot be null
+description - text type can be null
+deadline - dateTime type cannot be null, only date from future
+completed - boolean type cannot be null
 
 To test api you could use Postman.
 (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
