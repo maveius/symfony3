@@ -111,8 +111,8 @@ Install Docker from one of instruction
 
 Now We start docker
 ```
-docker-machine start opstalent
-eval "$(docker-machine env opstalent)"
+docker-machine start default
+eval "$(docker-machine env default)"
 
 docker-compose build
 docker-compose up
