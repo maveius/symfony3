@@ -69,12 +69,13 @@ You need to install php interpreter if you don't have already :)
 
 7. In the System Variables section, select Path (case-insensitive) and click Edit button
 
-Add a semi-colon (;) to the end of the string, then add the full file system path of your PHP installation (e.g. C:\php\php7)
-8. Keep clicking OK etc until all dialog boxes have disappeared
+8. Add a semi-colon (;) to the end of the string, then add the full file system path of your PHP installation (e.g. C:\php\php7)
 
-9. Close your command prompt and open it again
+9. Keep clicking OK etc until all dialog boxes have disappeared
 
-10. You should be able to type
+10. Close your command prompt and open it again
+
+11. You should be able to type
 
 ```
 php -v
