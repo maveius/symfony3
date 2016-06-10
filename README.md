@@ -37,7 +37,8 @@ To test API you could use Curl or Postman.
 
 (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 
-API auto-documentation should be avalible at (http://localhost.dev:8080/doc)
+API documentation is avalible at (http://localhost.dev:8080/doc).
+Your job is also to add actons to this documentation. [Nelmio API Bundle](https://github.com/nelmio/NelmioApiDocBundle)
 
 On job interview we perform code review for your work.
 
