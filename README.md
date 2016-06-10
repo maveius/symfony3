@@ -39,7 +39,7 @@ To test API you could use Curl or Postman.
 
 API auto-documentation should be avalible at (http://localhost.dev:8080/doc)
 
-On job interview we perform code review for your code.
+On job interview we perform code review for your work.
 
 ## Composer
 You need Composer so grab instruction from
