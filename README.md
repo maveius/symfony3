@@ -111,13 +111,16 @@ Install Docker from one of instruction
 
 Now We start docker
 ```
+#note this could be mandatory on mac os x
 docker-machine start default
 eval "$(docker-machine env default)"
+#end note
 
 docker-compose build
 docker-compose up
-
+#note this could be mandatory on mac os x
 docker-machine ip (copy IP) and then paste to hosts file
+#end note
 ```
 if everything goes green you should have see all containers started just type
 
