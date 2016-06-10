@@ -3,7 +3,7 @@ Rest Api
 
 Symfony 3.0 REST API Project Recruitment Test Task
 ## Task
-Your task is to create api for TODO list
+Your task is to create API for TODO list
 
 GET - list of todos
 
