@@ -33,13 +33,11 @@ deadline - dateTime type cannot be null, only date from future
 
 completed - boolean type cannot be null
 
-To test api you could use Curl or Postman.
+To test API you could use Curl or Postman.
 
 (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 
-Remember to create Entity, Form and Validation for this collection.
-
-API autodocumentation should be avalible at (http://localhost.dev:8080/doc)
+API auto-documentation should be avalible at (http://localhost.dev:8080/doc)
 
 On job interview we perform code review for your code.
 
