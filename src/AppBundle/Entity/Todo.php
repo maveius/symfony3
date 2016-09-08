@@ -23,24 +23,29 @@ class Todo
     /**
      * @ORM\Column(name="name", type="string", nullable=false, length=255)
      * @Assert\NotBlank()
+     * @Assert\Type("string")
      */
     private $name;
 
     /**
      * @ORM\Column(name="description", type="text", nullable=true)
+     * @Assert\Type("string")
      */
     private $description;
 
     /**
      * @ORM\Column(name="deadline", type="datetime", nullable=false)
      * @var DateTime
+     * @Assert\NotBlank()
      * @Assert\GreaterThan("today")
+     * @Assert\Type("DateTime|string")
      */
     private $deadline;
 
     /**
      * @ORM\Column(name="completed", type="boolean", nullable=false, columnDefinition="TINYINT(1) default FALSE")
      * @Assert\NotBlank()
+     * @Assert\Type("boolean")
      */
     private $completed;
 

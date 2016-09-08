@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Todo;
 use AppBundle\Utils\JsonUtils;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -25,6 +26,14 @@ class TodoController extends Controller
      *
      * @throws \InvalidArgumentException
      * @throws \LogicException
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Todo list action. This request path return JSON list of todo items saved in the database",
+     *  views = { "default", "premium" },
+     *  statusCodes={
+     *     200="Returned when successful",
+     *  }
+     * )
      */
     public function listAction()
     {
@@ -40,6 +49,25 @@ class TodoController extends Controller
      * @Route("/", name="apiTodoAdd")
      * @Route("", name="apiTodoAdd2")
      * @Method({"POST"})
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Add new Todo item. This request path can add new Todo item or more than one TODO item",
+     *  views = { "default", "premium" },
+     *  input="AppBundle\Entity\Todo",
+     *  statusCodes={
+     *      200="Returned when successful",
+     *  },
+     *  requirements={
+     *     {
+     *          "name"="_format",
+     *          "dataType"="json",
+     *          "description"="JSON entity to add. Returns JSON message after validation or save new object to database",
+     *          "requirement"="json",
+     *          "required"="true"
+     *      }
+     *  }
+     * )
      *
      * @param Request $request
      * @return Response
@@ -73,6 +101,25 @@ class TodoController extends Controller
     /**
      * @Route("/{id}", name="apiTodoEdit")
      * @Method({"PUT"})
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Edit Todo item",
+     *  views = { "default", "premium" },
+     *  input="AppBundle\Entity\Todo",
+     *  statusCodes={
+     *      200="Returned when successful",
+     *  },
+     *  requirements={
+     *     {
+     *          "name"="_format",
+     *          "dataType"="json",
+     *          "description"="JSON entity to add. Returns JSON message after validation or save new object to database",
+     *          "requirement"="json",
+     *          "required"="true"
+     *      }
+     *  }
+     * )
      *
      * @param Request $request
      * @param $id
@@ -118,6 +165,16 @@ class TodoController extends Controller
     /**
      * @Route("/{id}", name="apiDeleteTodo")
      * @Method({"DELETE"})
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Delete Todo item",
+     *  views = { "default", "premium" },
+     *  statusCodes={
+     *      200="Returned when successful",
+     *  }
+     * )
+     *
      * @throws \LogicException
      */
     public function deleteTodoItem($id)
@@ -134,6 +191,15 @@ class TodoController extends Controller
     /**
      * @Route("/{id}", name="apiCompleteTodo")
      * @Method({"PATCH"})
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Complete Todo item",
+     *  views = { "default", "premium" },
+     *  statusCodes={
+     *      200="Returned when successful",
+     *  },
+     * )
      * @throws \LogicException
      */
     public function completeTodoItem($id)

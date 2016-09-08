@@ -173,3 +173,80 @@ PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/op
 PHP message: PHP Stack trace:
 PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
 2016/09/08 18:20:25 [error] 3743#0: *83 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "PUT /app_dev.php/todo/15?XDEBUG_SESSION_START=12382 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket", host: "todo2.dev"
+2016/09/08 18:52:43 [error] 12781#0: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Semantical Error] Couldn't find constant Header, method AppBundle\Controller\TodoController::addTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:54
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php(101): Doctrine\Common\Annotations\AnnotationException::semanticalError('Couldn't find c...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(945): Doctrine\Common\Annotations\AnnotationException::semanticalErrorConstants('Header', 'method AppBundl...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(1011): Doctrine\Common\Annotations\DocParser->Constant()
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(992): Doc" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 18:53:09 [error] 12781#0: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught InvalidArgumentException: A "requirement" element has to contain a "name" attribute in /var/www/localhost/opsphp/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Annotation/ApiDoc.php:201
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(794): Nelmio\ApiDocBundle\Annotation\ApiDoc->__construct(Array)
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(641): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(334): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(257): Doctrine\Common\Annotations\DocParser->parse('/**\n     * @Rou...', 'method AppBundl...')
+#4 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annota" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 18:53:10 [error] 12781#0: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught InvalidArgumentException: A "requirement" element has to contain a "name" attribute in /var/www/localhost/opsphp/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Annotation/ApiDoc.php:201
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(794): Nelmio\ApiDocBundle\Annotation\ApiDoc->__construct(Array)
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(641): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(334): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(257): Doctrine\Common\Annotations\DocParser->parse('/**\n     * @Rou...', 'method AppBundl...')
+#4 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annota" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 18:56:46 [error] 12781#0: *40 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught InvalidArgumentException: A "requirement" element has to contain a "name" attribute in /var/www/localhost/opsphp/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Annotation/ApiDoc.php:201
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(794): Nelmio\ApiDocBundle\Annotation\ApiDoc->__construct(Array)
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(641): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(334): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(257): Doctrine\Common\Annotations\DocParser->parse('/**\n     * @Rou...', 'method AppBundl...')
+#4 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annota" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:45:58 [error] 12781#0: *153 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'statusCodes' at position 270 in method AppBundle\Controller\TodoController::completeTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotat" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:46:11 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'statusCodes' at position 272 in method AppBundle\Controller\TodoController::completeTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotat" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:46:13 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'statusCodes' at position 272 in method AppBundle\Controller\TodoController::completeTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotat" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:46:26 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got '}' at position 237 in method AppBundle\Controller\TodoController::completeTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocPa" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:46:36 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got '}' at position 237 in method AppBundle\Controller\TodoController::completeTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocPa" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:46:38 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Doctrine\Common\Annotations\AnnotationException: [Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got '}' at position 237 in method AppBundle\Controller\TodoController::completeTodoItem(). in /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocPa" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:46:43 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught InvalidArgumentException: A "parameter" element has to contain a "name" attribute in /var/www/localhost/opsphp/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Annotation/ApiDoc.php:224
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(794): Nelmio\ApiDocBundle\Annotation\ApiDoc->__construct(Array)
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(641): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(334): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(257): Doctrine\Common\Annotations\DocParser->parse('/**\n     * @Rou...', 'method AppBundl...')
+#4 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotati" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 19:47:05 [error] 12781#0: *156 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught InvalidArgumentException: "completed" parameter element has to contain a "dataType" attribute in /var/www/localhost/opsphp/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Annotation/ApiDoc.php:228
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(794): Nelmio\ApiDocBundle\Annotation\ApiDoc->__construct(Array)
+#1 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(641): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(334): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(257): Doctrine\Common\Annotations\DocParser->parse('/**\n     * @Rou...', 'method AppBundl...')
+#4 /var/www/localhost/opsphp/vendor/doctrine/annotations/lib/Doctrine/Com" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /doc HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
