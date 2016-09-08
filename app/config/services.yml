@@ -49,14 +49,14 @@ services:
         calls:
             - [ setAnnotationReader, [ "@annotation_reader" ] ]
 
-    entity_normalizer:
-        class: AppBundle\Serializer\Normalizer\EntityNormalizer
-        parent: serializer.normalizer.object
-        tags:
-            - { name: serializer.normalizer }
+#    entity_normalizer:
+#        class: AppBundle\Serializer\Normalizer\EntityNormalizer
+#        parent: serializer.normalizer.object
+#        tags:
+#            - { name: serializer.normalizer }ex
 
     serializer.annotation_loader:
-      class: AppBundle\Serializer\Mapping\Loader\AnnotationLoader
+      class: Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader
       arguments: ["@annotations.reader"]
 
     serializer.mapping.class_metadata_factory:

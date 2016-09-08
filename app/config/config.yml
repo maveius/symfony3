@@ -60,6 +60,12 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
         mappings:
+            AppBundle:
+                type: annotation
+                is_bundle: false
+                dir: "%kernel.root_dir%/../src/AppBundle/Entity/"
+                prefix: AppBundle\Entity
+                alias: AppBundle
             translatable:
                 type: annotation
                 alias: Gedmo

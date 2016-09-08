@@ -1,0 +1,175 @@
+2016/09/07 23:21:32 [error] 16106#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/localhost/opsphp/app/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/localhost/opsphp/app/autoload.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP   2. require() /var/www/localhost/opsphp/web/app.php:8
+PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/localhost/opsphp/app/../vendor/autoload.php' (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/app/autoload.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP   2. require() /var/www/localhost/opsphp/web/app.php:8" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/07 23:24:54 [error] 16106#0: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unable to create the cache directory (/var/www/localhost/opsphp/var/cache/prod)
+ in /var/www/localhost/opsphp/var/bootstrap.php.cache:2523
+Stack trace:
+#0 /var/www/localhost/opsphp/var/bootstrap.php.cache(2484): Symfony\Component\HttpKernel\Kernel->buildContainer()
+#1 /var/www/localhost/opsphp/var/bootstrap.php.cache(2273): Symfony\Component\HttpKernel\Kernel->initializeContainer()
+#2 /var/www/localhost/opsphp/var/bootstrap.php.cache(2304): Symfony\Component\HttpKernel\Kernel->boot()
+#3 /var/www/localhost/opsphp/web/app.php(28): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#4 {main}
+  thrown in /var/www/localhost/opsphp/var/bootstrap.php.cache on line 2523" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/07 23:49:51 [error] 16106#0: *110 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined class constant 'CONTROLLER_ARGUMENTS' in /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Debug/TraceableEventDispatcher.php:64
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php(142): Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher->postDispatch('kernel.request', Object(Symfony\Component\HttpKernel\Event\GetResponseEvent))
+#1 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php(129): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.request', Object(Symfony\Component\HttpKernel\Event\GetResponseEvent))
+#2 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php(68): Symfony\Component\HttpKernel\HttpKernel->handleRaw(Object(Symfony\Component\HttpFoundation\R" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/07 23:49:52 [error] 16106#0: *110 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined class constant 'CONTROLLER_ARGUMENTS' in /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Debug/TraceableEventDispatcher.php:64
+Stack trace:
+#0 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php(142): Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher->postDispatch('kernel.request', Object(Symfony\Component\HttpKernel\Event\GetResponseEvent))
+#1 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php(129): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.request', Object(Symfony\Component\HttpKernel\Event\GetResponseEvent))
+#2 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php(68): Symfony\Component\HttpKernel\HttpKernel->handleRaw(Object(Symfony\Component\HttpFoundation\R" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:27 [error] 16106#0: *186 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:34 [error] 16106#0: *186 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:34 [error] 16106#0: *187 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:35 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:35 [error] 16106#0: *186 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:58 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:59 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:02:59 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:03:02 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:03:02 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:03:03 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:03:03 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/localhost/opsphp/var/logs/prod.log" could not be opened: failed to open stream: Permission denied in /var/www/localhost/opsphp/var/cache/prod/classes.php:6394
+Stack trace:
+#0 /var/www/localhost/opsphp/var/cache/prod/classes.php(6324): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/localhost/opsphp/var/cache/prod/classes.php(6248): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /var/www/localhost/opsphp/var/cache/prod/classes.php(6489): Monolog\Handler\AbstractHandler->handleBatch(Array)
+#3 /var/www/localhost/opsphp/var/cache/prod/classes.php(6505): Monolog\Handler\FingersCrossedHandler->activate()
+#4 /var/www/localhost/opsphp/var/cache/prod/classes.php(6822): Monolog\Handler\FingersCrossedHandler->handle(Array)
+#5 /var/www/localhost/opsphp/var/cache/prod/classes.php(6929): Monolog\Logger->addRecord(500, 'Uncaught PHP Ex...', Array)
+#6 /var/www/localhost/opsphp/vendor/symfony/symfony/src/Sym" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:03:20 [error] 16106#0: *188 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 00:03:22 [error] 16106#0: *186 FastCGI sent in stderr: "PHP message: PHP Warning:  include_once(/var/www/localhost/opsphp/web/../var/bootstrap.php.cache): failed to open stream: No such file or directory in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0
+PHP message: PHP Warning:  include_once(): Failed opening '/var/www/localhost/opsphp/web/../var/bootstrap.php.cache' for inclusion (include_path='.:/usr/share/php7:/usr/share/php') in /var/www/localhost/opsphp/web/app.php on line 9
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/localhost/opsphp/web/app.php:0" while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket:", host: "todo2.dev"
+2016/09/08 18:20:25 [error] 3743#0: *83 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: todo2.dev, request: "PUT /app_dev.php/todo/15?XDEBUG_SESSION_START=12382 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm.socket", host: "todo2.dev"
